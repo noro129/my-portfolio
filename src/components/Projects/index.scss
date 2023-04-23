@@ -1,0 +1,100 @@
+.projects-page{
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    right: 0;
+    overflow: auto;
+
+    .title{
+        z-index: 3;
+        position: absolute;
+        left: 35%;
+        text-align: center;
+
+        h1{
+            color: #CC2936;
+            font-size: 70px;
+            margin-top: -5px;
+        }
+    }
+
+    .projects-section{
+        position: absolute;
+        top: 12%;
+        left: 0%;
+        width: 95%;
+        height: 85%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 1%;
+        animation: fadeIn 1s forwards;
+        
+        .project-info{
+            position: relative;
+            margin-top: 4px;
+            height: 48%;
+            width: 23%;
+            min-width: 300px;
+            border: 1px solid #17A398;
+            border-radius: 10px;
+            transition: 1000ms ease-out;
+            overflow: hidden;
+
+            &:hover{
+                background: linear-gradient(45deg,rgba(23, 163, 152,.08),rgba(204, 41, 54,.08));
+                transform: scale(1.05);
+            }
+
+            &:hover .project-title::after{
+                left: 0;
+                border: 1px solid #17A398;
+                width: 100%;
+                box-shadow: 0 0 5px 3px #17A398;
+            }
+
+            &:hover .project-tools{
+                bottom: 0;
+            }
+
+            .project-title{
+                width: 90%;
+                position: absolute;
+                text-align: center;
+                padding: 5%;
+                font-size: 20px;
+                color: #fff;
+
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 0%;
+                    height: 0;
+                    bottom: 0;
+                    right: 0;
+                    transition: 500ms ease-in;
+
+                }
+            }
+
+            .project-tools{
+                position: absolute;
+                width: 96%;
+                height: max-content;
+                bottom: -100%;
+                left: 0%;
+                padding: 2%;
+                color: #fff;
+                font-size: large;
+                transition: 500ms ease-out;
+
+                span{
+                    font-weight: 400;
+                    font-size: 20px;
+                    letter-spacing: 2px;
+                }
+            }
+
+        }
+    }
+}
